@@ -1,4 +1,4 @@
-class Toni_GUI_Tonisdebug {
+class Admin_GUI_Tonisdebug {
 	idd = 6687;
     name = "Admin_GUI_Tonisdebug";
 	movingEnable = 0;

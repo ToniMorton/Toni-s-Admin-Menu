@@ -1,4 +1,4 @@
-class Toni_GUI_MainGUI {
+class Admin_GUI_MainGUI {
 	idd = 6686;
     style = 32;
     name = "Admin_GUI_MainGUI";

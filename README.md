@@ -1,12 +1,36 @@
 # Toni's Admin Menu
 A Simple, Portable admin menu for Arma 3 
 
+Project has been updated to V1.0. 
 
-This project is unfinished.. ill try to keep it up to date as time goes on but yeah. its kinda a pain to work on 
+To use this: 
+
+Click the new  "Load Toni's Admin Menu" button in your inventory screen when in your server.
 
 
+The Keybinds are:
 
-NOTICE:
+F6:  Main GUI
 
-Anyone may take this menu as a base for their own servers. I am taking a long break from ArmA Scripting in favor of GTA V's FiveM mod. 
-Please, If you do make this work. update it on this github so everyone can enjoy it.
+F8: Debug Console
+
+F3: Heal Yourself
+
+Left Shift + Del: Destroy Cursortarget 
+
+Del: Delete Cursortarget 
+
+Left Shift + ~: Airstrike at Cursortarget
+
+Left Shift + 1:  Unlock Cursortarget 
+
+Left Shift + 2:  Lock Cursortarget 
+
+Left Shift + 3: Revive Cursortarget (Alits Life Only) 
+
+Left Shift + 4: Attach Cursortarget to your player
+
+4 Key: Detach All Objects from you
+
+
+Note: I am NOT responsible if you use this for cheating.. this menu is intended for Admins/Developers to test things or for people to dick around on their own private servers/Singleplayer 

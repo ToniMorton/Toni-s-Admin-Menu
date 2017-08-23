@@ -30,6 +30,10 @@ Left Shift + 3: Revive Cursortarget (Alits Life Only)
 
 Left Shift + 4: Attach Cursortarget to your player
 
+Left Shift + Ins: Delete Cursortargets Gear 
+
+Ins Key: Clone CursorTargets Gear
+
 4 Key: Detach All Objects from you
 
 

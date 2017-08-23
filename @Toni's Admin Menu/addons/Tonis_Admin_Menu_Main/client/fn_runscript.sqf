@@ -71,16 +71,6 @@ switch (lbtext[1700,(lbCurSel 1700)]) do
     {
         [] call _invldselect;
     };
-    case "Disable Player Input":
-    {
-        [{[_playername, 1] call Admin_fnc_TargetInput}] call Admin_fnc_mpexec;
-        systemchat format ["Tonis Admin Menu: %1s Input Disabled",_playername];
-    };
-    case "Enable Player Input":
-    {
-        [{[_playername, 0] call Admin_fnc_TargetInput}] call Admin_fnc_mpexec;
-        systemchat format ["Tonis Admin Menu: %1s Input Restored",_playername];
-    };
     case "Teleport Player Here":
     {
         [_playername] call Admin_fnc_teleporthere;
@@ -91,21 +81,6 @@ switch (lbtext[1700,(lbCurSel 1700)]) do
         [_playername] call Admin_fnc_teleporttoplr;
         systemchat format ["Tonis Admin Menu: You Have Teleported To %1",_playername];
     };
-    case "Kick To Lobby":
-    {
-        [{[_playername] call Admin_fnc_kickplr}] call Admin_fnc_mpexec;
-        systemchat format ["Tonis Admin Menu: %1 Kicked To Lobby",_playername];
-    };
-    case "Eject EVERYONE From Target Vehicle":
-    {
-        [{[_playername,1] call Admin_fnc_ejectplr}] call Admin_fnc_mpexec;
-        systemchat "Toni's Admin Menu: Players Ejected From Target Vehicle";
-    };    
-    case "Eject Target From Target Vehicle":
-    {
-        [{[_playername,2] call Admin_fnc_ejectplr}] call Admin_fnc_mpexec;
-        systemchat format ["Tonis Admin Menu: %1 Ejected From Vehicle",_playername];
-    };    
     case "Kill Selected Player":
     {
         [_playername] call Admin_fnc_killtarget;
@@ -120,14 +95,7 @@ switch (lbtext[1700,(lbCurSel 1700)]) do
     };
     case "Give Money (Randomized Amount)":
     {
-        if (_playername == _sendername or _playername isequalto '') then
-        {
-            [name player] call Admin_fnc_altismoney;
-        }
-        else 
-        {
-            [{[_playername] call Admin_fnc_altismoney}] call Admin_fnc_mpexec;
-        };
+        [name player] call Admin_fnc_altismoney;
     };   
     case "Spawn Money Pile (Local)":
     {

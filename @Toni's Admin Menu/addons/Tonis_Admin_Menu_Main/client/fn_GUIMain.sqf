@@ -1,6 +1,6 @@
 private["_display","_list"];
 disableSerialization;
-_display = (findDisplay 2686);
+_display = (findDisplay 6686);
 _playerlist = _display displayCtrl 1501;
 _scriptlist = _display displayCtrl 1700;
 _vehiclelist = _display displayCtrl 1502;

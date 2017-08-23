@@ -19,15 +19,7 @@ class CfgFunctions
 #include "Dialogs\MainGUI.hpp"
 #include "Dialogs\Tonisdebug.hpp"
 #include "BIS_addoninfo.hpp"
-class CfgNotifications { 
-    class Tonialert {
-        title = "Toni's Admin Menu v1.0";
-        iconPicture = "\Tonis_Admin_Menu_Main\rsc\check.paa";
-        description = "%1";
-        duration = 10;
-        priority = 5;
-    };
-};
+
 class RscDisplayInventory
 {
 	class Controls

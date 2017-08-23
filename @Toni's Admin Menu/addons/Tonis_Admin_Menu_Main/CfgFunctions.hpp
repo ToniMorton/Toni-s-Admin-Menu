@@ -16,7 +16,6 @@ class Tonis_Admin_Menu
         class altismoney {};
         class debugconsole {};
         class deletevehicle {};
-        class killall {};
         class spawnwep {};
         class teleporthere {};
         class clonegear {};
@@ -30,9 +29,7 @@ class Tonis_Admin_Menu
         class unrestrain {};
         class delgear {};
         class teleporttoplr {};
-        class mpinit {};
         class debug {};
-        class destroyarea {};
         class killtarget {};
         class Missilelaunch {};
         class Teleporteveryone {};

@@ -55,7 +55,7 @@ class Admin_GUI_debugtextfield: RscEdit
 	w = 36 * GUI_GRID_W;
 	h = 9 * GUI_GRID_H;
     style = 16;
-    shadow = 2
+    shadow = 2;
 	colorText[] = {1,1,1,1};
 	colorBackground[] = {0,0,0,0.5};
     autocomplete = "scripting";

@@ -89,7 +89,7 @@ if (alive player) then
         {
             if (_shiftkey) then
             {
-                [] call Admin_fnc_unlockveh;
+                [] call Admin_fnc_lockveh;
             };
         };             
         //Shift + 3 key : revive cursorTarget (Altis Life Only)

@@ -41,13 +41,21 @@ if (alive player) then
                 if (_shiftkey) then {_handled = true;};
                 if (_shiftkey) then 
                 {
-                    [] call Admin_fnc_destroycursor;
+                    if (!(isNull cursortarget)) then
+                    {
+                        cursortarget setdamage 1;;
+                        systemchat "Toni's Admin Menu: Cursortarget Destroyed.";
+                    };
                     _handled = true;
                 }
                 else
                 {
-                    [] call Admin_fnc_deletevehicle;
-                    _handled = true;
+                        if (!(isNull cursorObject)) then
+                        {
+                            deletevehicle cursorObject; 
+                            systemchat "Toni's Admin Menu: Target Deleted";
+                        };
+                        _handled = true;
                 };
 		};          
         //Missile Strike: shift + ~ Key 
@@ -66,13 +74,17 @@ if (alive player) then
                 if (_shiftkey) then {_handled = true;};
                 if (_shiftkey) then
                 {
-                    [] call Admin_fnc_delgear;
+                    removeAllWeapons cursortarget;
+                    removeAllItems cursortarget;
+                    removeBackpack cursortarget;
+                    removeUniform cursortarget;
+                    systemchat "Toni's Admin Menu: Target Gear Deleted.";
                     _handled = true;
                 }
                 else
                 {
-                    
-                    [] call Admin_fnc_clonegear;
+                    player setUnitLoadout (getUnitLoadout cursortarget);
+                    systemchat "Toni's Admin Menu: Loadout Cloned to your player.";
                     _handled = true;
                 };
 		};
@@ -81,7 +93,9 @@ if (alive player) then
         {
             if (_shiftkey) then
             {
-                [] call Admin_fnc_unlockveh;
+                cursortarget lock 0;
+                systemchat "Toni's Admin Menu: Vehicle Unlocked";
+                _handled = true;
             };
         };              
         //shift + 2 key : lock cursorTarget
@@ -89,7 +103,9 @@ if (alive player) then
         {
             if (_shiftkey) then
             {
-                [] call Admin_fnc_lockveh;
+                cursortarget lock 2;
+                systemchat "Toni's Admin Menu: Vehicle Locked";
+                _handled = true;
             };
         };             
         //Shift + 3 key : revive cursorTarget (Altis Life Only)
@@ -101,6 +117,7 @@ if (alive player) then
                 {
                     [name player] remoteExecCall ["life_fnc_revived",cursorTarget];
                     systemchat "Toni's Admin Menu: CursorTarget Revived";
+                    _handled = true;
                 };
             };
         };          
@@ -110,13 +127,15 @@ if (alive player) then
             if (_shiftkey) then {_handled = true;};
             if (_shiftkey) then
             {
-                [1] call Admin_fnc_attachtome;
+                cursortarget attachTo [player, [0, 0, 4]];
                 systemchat "Toni's Admin Menu: CursorTarget Attached to your player.";
+                _handled = true;
             }
             else
             {
-                [2] call Admin_fnc_attachtome;
+                {_x setpos (screenToWorld [0.5,0.5]); detach _x}foreach attachedobjects player; 
                 systemchat "Toni's Admin Menu: Object detached from your player";
+                _handled = true;
             };
         }; 
 

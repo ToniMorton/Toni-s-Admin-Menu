@@ -38,10 +38,3 @@ Ins Key: Clone CursorTargets Gear
 
 
 Note: I am NOT responsible if you use this for cheating.. this menu is intended for Admins/Developers to test things or for people to dick around on their own private servers/Singleplayer 
-
-
-Screenshots:
-
-https://i.gyazo.com/c59f025c3fffe494c7e48c02a69b367b.png
-
-https://i.gyazo.com/44a3418537b78df0084bdca4d51466fe.png
